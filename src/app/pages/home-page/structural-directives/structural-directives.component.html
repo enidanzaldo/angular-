@@ -9,10 +9,10 @@
 </div>
 } @else {
 <div class="p-4 bg-gray-200 text-gray-600 italic rounded-lg mb-4">
-  ⚠️ This block is hidden
+  ⚠ This block is hidden
 </div>
 }
-<button  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mb-6">
+<button (click)="toggleVisibility()" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mb-6">
   Toggle Visibility
 </button>
 
@@ -21,24 +21,24 @@
 <br>
 <h6 class="text-4xl font-medium leading-tight text-gray-800 mb-8">Switch Case</h6>
 
-@switch(viewMode) {
-  @case('list') {
-    
+@switch(viewMode()) {
+@case('list') {
+
 <div class="p-4 text-blue-600 font-bold border rounded-lg">
   📋 List View
 </div>
 
-  }@case('grid') {
-    
+}@case('grid') {
+
 <div class="p-4 text-purple-600 font-bold border rounded-lg">
   🟦 Grid View
 </div>
-  }@default {
-    
+}@default {
+
 <div class="p-4 text-gray-600 italic border rounded-lg">
   ❌ No view selected
 </div>
-  }
+}
 }
 
 <div class="flex gap-3 mt-10">
@@ -59,12 +59,12 @@
 <div class="mt-8">
   <h2 class="text-lg font-bold mb-3">User List</h2>
 
-@for(user of users(); track user.id) {
+  @for(user of users(); track user.id) {
   <div class="flex justify-between items-center bg-white p-3 mb-2 rounded-lg border">
     <span class="text-gray-700">
-      👤  {{user.name}} — <span class="italic text-gray-500">{{user.role}}</span>
+      👤 {{user.name}} — <span class="italic text-gray-500">{{user.role}}</span>
     </span>
 
   </div>
-}
+  }
 </div>

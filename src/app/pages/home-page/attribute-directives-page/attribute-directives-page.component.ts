@@ -7,10 +7,10 @@ import { Component, computed, signal } from '@angular/core';
   templateUrl: './attribute-directives-page.component.html',
 })
 export class AttributeDirectivesPageComponent { 
-  tittle = 'Attribute Directives ';
+  title = 'Attribute Directives ';
   state = signal<'active' | 'error' | 'neutral'>('neutral');
 
-  mesaage = computed(() => {
+  message = computed(() => {
     switch(this.state()){
       case 'active':
         return 'The current state is active';
@@ -21,15 +21,15 @@ export class AttributeDirectivesPageComponent {
     }
   });
 
-  setactive(){
+  setActive(){
     this.state.set('active');
   }
 
-  seterror(){
+  setError(){
     this.state.set('error');
   }
 
-  setneutral(){
+  setNeutral(){
     this.state.set('neutral');
   } 
 }
