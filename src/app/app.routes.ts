@@ -1,12 +1,21 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CounterPageComponent } from './pages/home-page/counter-page/counter-page.component';
+import { StructuralDirectivesComponent } from './pages/home-page/structural-directives/structural-directives.component';
+import { AttributeDirectivesPageComponent } from './pages/home-page/attribute-directives-page/attribute-directives-page.component';
+import { DataBindingPageComponent } from './pages/data-binding-page/data-binding-page.component';
 
 export const routes: Routes = [
-    {path: '',component: HomePageComponent},
+    {path: 'home',component: HomePageComponent},
 
     {path: 'counter', component: CounterPageComponent},
-    
-    {path: '**', redirectTo: ''} // Wildcard route for a 404 page
+
+    {path: 'structural-directives', component: StructuralDirectivesComponent},
+
+    {path: 'attribute-directives', component: AttributeDirectivesPageComponent},
+
+    {path: 'data-binding', component: DataBindingPageComponent},
+
+    {path: '**', redirectTo: 'home', pathMatch: 'full'} // Wildcard route for a 404 page
 ];
 
