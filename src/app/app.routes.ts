@@ -4,6 +4,7 @@ import { CounterPageComponent } from './pages/home-page/counter-page/counter-pag
 import { StructuralDirectivesComponent } from './pages/home-page/structural-directives/structural-directives.component';
 import { AttributeDirectivesPageComponent } from './pages/home-page/attribute-directives-page/attribute-directives-page.component';
 import { DataBindingPageComponent } from './pages/data-binding-page/data-binding-page.component';
+import { ServicePageComponent } from './pages/service-page/service-page.component';
 
 export const routes: Routes = [
     {path: 'home',component: HomePageComponent},
@@ -15,6 +16,8 @@ export const routes: Routes = [
     {path: 'attribute-directives', component: AttributeDirectivesPageComponent},
 
     {path: 'data-binding', component: DataBindingPageComponent},
+
+    {path: 'service', component: ServicePageComponent},
 
     {path: '**', redirectTo: 'home', pathMatch: 'full'} // Wildcard route for a 404 page
 ];

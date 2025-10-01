@@ -1,0 +1,17 @@
+import { Component, input, output } from '@angular/core';
+import { ITask } from '../../../../core/header/interfaces';
+
+@Component({
+  selector: 'app-task-list',
+  imports: [],
+  templateUrl: './task-list.component.html',
+})
+export class TaskListComponent { 
+  outputTaskid = output<number>();
+  tasks = input.required<ITask[]>();
+
+  deleteTask(id: number) {
+    this.outputTaskid.emit(id);
+  }
+
+}
