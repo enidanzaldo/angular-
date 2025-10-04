@@ -7,11 +7,11 @@ import { ITask } from '../../../../core/header/interfaces';
   templateUrl: './task-list.component.html',
 })
 export class TaskListComponent { 
-  outputTaskid = output<number>();
+  outputTaskId = output<number>();
   tasks = input.required<ITask[]>();
 
   deleteTask(id: number) {
-    this.outputTaskid.emit(id);
+    this.outputTaskId.emit(id);
   }
 
 }

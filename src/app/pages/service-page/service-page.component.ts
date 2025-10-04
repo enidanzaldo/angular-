@@ -13,7 +13,7 @@ export class ServicePageComponent {
 
   taskService = inject(TaskService);
 
-  addnewTask(task:ITask){
+  addNewTask(task:ITask){
     this.taskService.addTask(task);
 }
 
